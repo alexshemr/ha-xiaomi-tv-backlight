@@ -1,0 +1,16 @@
+{
+  "domain": "xiaomi_tv_backlight",
+  "name": "Xiaomi TV Backlight Control",
+  "codeowners": [
+    "@alexshemr"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/alexshemr/ha-xiaomi-tv-backlight",
+  "iot_class": "local_polling",
+  "requirements": [],
+  "version": "0.4.1",
+  "zeroconf": [
+    "_xiaomi-backlight._tcp.local."
+  ],
+  "issue_tracker": "https://github.com/alexshemr/ha-xiaomi-tv-backlight/issues"
+}

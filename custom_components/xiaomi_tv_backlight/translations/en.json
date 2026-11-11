@@ -1,0 +1,49 @@
+{
+  "title": "Xiaomi TV Backlight Control",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Xiaomi TV",
+        "description": "Enter the TV IP address or local API URL.",
+        "data": {
+          "host": "TV address"
+        }
+      },
+      "pair": {
+        "title": "Pair your TV",
+        "description": "Open the app on your TV, select Pair with Home Assistant and enter the six-digit code.",
+        "data": {
+          "code": "Pairing code"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the TV. Check its address, network and backlight permission.",
+      "invalid_code": "Code incorrect, expired or pairing closed. Open pairing on the TV again."
+    },
+    "abort": {
+      "already_configured": "This TV is already configured.",
+      "cannot_connect": "Unable to connect to the TV."
+    }
+  },
+  "entity": {
+    "number": {
+      "backlight": {
+        "name": "Backlight"
+      }
+    },
+    "binary_sensor": {
+      "connection": {
+        "name": "Connection"
+      }
+    }
+  },
+  "exceptions": {
+    "cannot_connect": {
+      "message": "Unable to reach the TV. Turn it on and check the connection."
+    },
+    "invalid_level": {
+      "message": "Backlight must be a whole number from 0 to 100."
+    }
+  }
+}
